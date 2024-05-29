@@ -14,8 +14,16 @@ def update(state):
     state["maxVar"]="{:.2f}".format(df.max().round(3))
     state["desVar"]="{:.2f}".format(df.std().round(3))
 
+def updateBi(state):
+    print(type(state["fecha_ini"]),type(state["fecha_fin"]))
+    df = data[state["fecha_ini"]:state["fecha_fin"]]    
 
-
+def updateBox(state):
+    df = data[state["column"]]
+    #df = data[data.index.month == int(state['selMonth'])]
+    #dataDeads1=data.loc[data['Survived']==1,['Survived','Sex']].groupby(by='Sex').count()
+    dataDate=data[df].groupby(by=([data.index.month, data.index.year]))
+    state["graficoBox"] = px.box(dataDate, x=df.index.year,y="column")
 
 initial_state = ss.init_state({
     "my_app": {
