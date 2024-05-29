@@ -1,0 +1,388 @@
+{
+    "metadata": {
+        "streamsync_version": "0.5.0"
+    },
+    "components": {
+        "root": {
+            "id": "root",
+            "type": "root",
+            "content": {
+                "appName": "My App"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "c0f99a9e-5004-4e75-a6c6-36f17490b134": {
+            "id": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "type": "page",
+            "content": {
+                "pageMode": "compact",
+                "emptinessColor": "#e9eef1"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "root",
+            "handlers": {},
+            "visible": true
+        },
+        "bebc5fe9-63a7-46a7-b0fa-62303555cfaf": {
+            "id": "bebc5fe9-63a7-46a7-b0fa-62303555cfaf",
+            "type": "header",
+            "content": {
+                "text": "@{my_app.title}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "handlers": {},
+            "visible": true
+        },
+        "28d3885b-0fb8-4d41-97c6-978540015431": {
+            "id": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "type": "section",
+            "content": {
+                "title": "",
+                "containerShadow": "0px 4px 11px -12px #000000"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "handlers": {},
+            "visible": true
+        },
+        "utw6go3x3nvptgsn": {
+            "id": "utw6go3x3nvptgsn",
+            "type": "tabs",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "28d3885b-0fb8-4d41-97c6-978540015431",
+            "handlers": {},
+            "visible": true
+        },
+        "mqu2jl1nv7xg5gg1": {
+            "id": "mqu2jl1nv7xg5gg1",
+            "type": "tab",
+            "content": {
+                "name": "Analisis Univariado"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "utw6go3x3nvptgsn",
+            "handlers": {},
+            "visible": true
+        },
+        "ovvtflxe3xt0qj4t": {
+            "id": "ovvtflxe3xt0qj4t",
+            "type": "tab",
+            "content": {
+                "name": "Analisis Bivariado"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "utw6go3x3nvptgsn",
+            "handlers": {},
+            "visible": true
+        },
+        "s3093rc9vj827qlq": {
+            "id": "s3093rc9vj827qlq",
+            "type": "tab",
+            "content": {
+                "name": "Analisis Mensual"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "utw6go3x3nvptgsn",
+            "handlers": {},
+            "visible": true
+        },
+        "1o82md4pclbrtbys": {
+            "id": "1o82md4pclbrtbys",
+            "type": "dropdowninput",
+            "content": {
+                "label": "Variable",
+                "options": "@{var}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "mqu2jl1nv7xg5gg1",
+            "handlers": {
+                "ss-option-change": "update"
+            },
+            "visible": true,
+            "binding": {
+                "eventType": "ss-option-change",
+                "stateRef": "column"
+            }
+        },
+        "nmlolcqkvhzvyk7q": {
+            "id": "nmlolcqkvhzvyk7q",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{graficol}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "y5d4qzk8cphf68ca",
+            "handlers": {},
+            "visible": true
+        },
+        "rroh43xrdrv46z6t": {
+            "id": "rroh43xrdrv46z6t",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{grafiHist}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "b1vv5vui952p2zih",
+            "handlers": {},
+            "visible": true
+        },
+        "xjy61pb8axd47y4n": {
+            "id": "xjy61pb8axd47y4n",
+            "type": "columns",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "mqu2jl1nv7xg5gg1",
+            "handlers": {},
+            "visible": true
+        },
+        "y5d4qzk8cphf68ca": {
+            "id": "y5d4qzk8cphf68ca",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "xjy61pb8axd47y4n",
+            "handlers": {},
+            "visible": true
+        },
+        "b1vv5vui952p2zih": {
+            "id": "b1vv5vui952p2zih",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "xjy61pb8axd47y4n",
+            "handlers": {},
+            "visible": true
+        },
+        "yk02p3a4jeicvgfd": {
+            "id": "yk02p3a4jeicvgfd",
+            "type": "metric",
+            "content": {
+                "name": "Media",
+                "note": "",
+                "metricValue": "@{medVar}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "g6o12o72j1gof9ub",
+            "handlers": {},
+            "visible": true
+        },
+        "yurdsu0py9rswsxe": {
+            "id": "yurdsu0py9rswsxe",
+            "type": "metric",
+            "content": {
+                "name": "Maximo",
+                "note": "",
+                "metricValue": "@{maxVar}"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "g6o12o72j1gof9ub",
+            "handlers": {},
+            "visible": true
+        },
+        "jd1p3ecy8ckp6eg2": {
+            "id": "jd1p3ecy8ckp6eg2",
+            "type": "metric",
+            "content": {
+                "name": "Desv Estandar",
+                "note": "",
+                "metricValue": "@{desVar}"
+            },
+            "isCodeManaged": false,
+            "position": 3,
+            "parentId": "g6o12o72j1gof9ub",
+            "handlers": {},
+            "visible": true
+        },
+        "vi8unjc8j6i1uxf1": {
+            "id": "vi8unjc8j6i1uxf1",
+            "type": "metric",
+            "content": {
+                "name": "Minimo",
+                "note": "",
+                "metricValue": "@{minVar}"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "g6o12o72j1gof9ub",
+            "handlers": {},
+            "visible": true
+        },
+        "g6o12o72j1gof9ub": {
+            "id": "g6o12o72j1gof9ub",
+            "type": "horizontalstack",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "mqu2jl1nv7xg5gg1",
+            "handlers": {},
+            "visible": true
+        },
+        "6r9a8ghitn8xqznx": {
+            "id": "6r9a8ghitn8xqznx",
+            "type": "dropdowninput",
+            "content": {
+                "label": "Variable 1",
+                "options": "@{var}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "2w4oytliz6mvpmny",
+            "handlers": {
+                "ss-option-change": "updateBi"
+            },
+            "visible": true,
+            "binding": {
+                "eventType": "ss-option-change",
+                "stateRef": "column"
+            }
+        },
+        "u0kzw9nf0uxsn7le": {
+            "id": "u0kzw9nf0uxsn7le",
+            "type": "dropdowninput",
+            "content": {
+                "label": "variable 2",
+                "options": "@{var}"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "2w4oytliz6mvpmny",
+            "handlers": {
+                "ss-option-change": "updateBi"
+            },
+            "visible": true,
+            "binding": {
+                "eventType": "ss-option-change",
+                "stateRef": "column"
+            }
+        },
+        "2w4oytliz6mvpmny": {
+            "id": "2w4oytliz6mvpmny",
+            "type": "horizontalstack",
+            "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "ovvtflxe3xt0qj4t",
+            "handlers": {},
+            "visible": true
+        },
+        "athzezyahrhussaf": {
+            "id": "athzezyahrhussaf",
+            "type": "dateinput",
+            "content": {
+                "label": "Fecha inicial"
+            },
+            "isCodeManaged": false,
+            "position": 2,
+            "parentId": "2w4oytliz6mvpmny",
+            "handlers": {
+                "ss-date-change": "updateBi"
+            },
+            "visible": true,
+            "binding": {
+                "eventType": "ss-date-change",
+                "stateRef": "@{fecha_ini}"
+            }
+        },
+        "rrha01fkzzuyut19": {
+            "id": "rrha01fkzzuyut19",
+            "type": "dateinput",
+            "content": {
+                "label": "fecha final"
+            },
+            "isCodeManaged": false,
+            "position": 3,
+            "parentId": "2w4oytliz6mvpmny",
+            "handlers": {
+                "ss-date-change": "updateBi"
+            },
+            "visible": true,
+            "binding": {
+                "eventType": "ss-date-change",
+                "stateRef": "@{fecha_fin}"
+            }
+        },
+        "pdrz6k86h2gxi8tp": {
+            "id": "pdrz6k86h2gxi8tp",
+            "type": "dropdowninput",
+            "content": {
+                "label": "variable",
+                "options": "@{var}"
+            },
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "s3093rc9vj827qlq",
+            "handlers": {
+                "ss-option-change": "updateBox"
+            },
+            "visible": true,
+            "binding": {
+                "eventType": "ss-option-change",
+                "stateRef": "column"
+            }
+        },
+        "2w8j2da1d4uxme2p": {
+            "id": "2w8j2da1d4uxme2p",
+            "type": "columns",
+            "parentId": "ovvtflxe3xt0qj4t",
+            "content": {},
+            "handlers": {},
+            "position": 1,
+            "visible": true
+        },
+        "xht0ep30wm7td3w7": {
+            "id": "xht0ep30wm7td3w7",
+            "type": "columns",
+            "parentId": "s3093rc9vj827qlq",
+            "content": {},
+            "handlers": {},
+            "position": 1,
+            "visible": true
+        },
+        "uh3h82e0nob6wynz": {
+            "id": "uh3h82e0nob6wynz",
+            "type": "column",
+            "parentId": "xht0ep30wm7td3w7",
+            "content": {
+                "width": "1"
+            },
+            "handlers": {},
+            "position": 0,
+            "visible": true
+        },
+        "h0bijeudg1f2qr25": {
+            "id": "h0bijeudg1f2qr25",
+            "type": "plotlygraph",
+            "parentId": "uh3h82e0nob6wynz",
+            "content": {
+                "spec": "@{graficoBox}"
+            },
+            "handlers": {},
+            "position": 0,
+            "visible": true
+        }
+    }
+}
