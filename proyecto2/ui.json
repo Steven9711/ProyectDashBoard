@@ -265,7 +265,7 @@
             "type": "dropdowninput",
             "content": {
                 "label": "variable 2",
-                "options": "@{var}"
+                "options": "@{var2}"
             },
             "isCodeManaged": false,
             "position": 1,
@@ -276,7 +276,7 @@
             "visible": true,
             "binding": {
                 "eventType": "ss-option-change",
-                "stateRef": "column"
+                "stateRef": "column1"
             }
         },
         "2w4oytliz6mvpmny": {
