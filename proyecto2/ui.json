@@ -344,16 +344,6 @@
                 "stateRef": "column"
             }
         },
-        "2w8j2da1d4uxme2p": {
-            "id": "2w8j2da1d4uxme2p",
-            "type": "columns",
-            "content": {},
-            "isCodeManaged": false,
-            "position": 1,
-            "parentId": "ovvtflxe3xt0qj4t",
-            "handlers": {},
-            "visible": true
-        },
         "xht0ep30wm7td3w7": {
             "id": "xht0ep30wm7td3w7",
             "type": "columns",
@@ -415,6 +405,19 @@
             "position": 0,
             "parentId": "uh3h82e0nob6wynz",
             "handlers": {},
+            "visible": true
+        },
+        "05uunwr3qu2ef01v": {
+            "id": "05uunwr3qu2ef01v",
+            "type": "metric",
+            "parentId": "ovvtflxe3xt0qj4t",
+            "content": {
+                "note": "+Pass",
+                "name": "Correlacion",
+                "metricValue": "@{Corvar}"
+            },
+            "handlers": {},
+            "position": 1,
             "visible": true
         }
     }

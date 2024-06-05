@@ -2,6 +2,7 @@ import streamsync as ss
 import pandas as pd
 import plotly.express as px
 import numpy as np
+
 data_link = "https://raw.githubusercontent.com/cgl-itm/ProgramacionAvanzada-ITM/main/Proyectos/04_Datos/02_london_weather.csv"
 data = pd.read_csv(data_link, index_col=0, parse_dates=True)
 
@@ -15,11 +16,16 @@ def update(state):
     state["desVar"]="{:.2f}".format(df.std())
 
 def updateBi(state):
-    print(type(state["fecha_ini"]),type(state["fecha_fin"]))
-    df = data[state["fecha_ini"]:state["fecha_fin"]]    
+    #print(type(state["fecha_ini"]),type(state["fecha_fin"]))
+    df = data[state["fecha_ini"]:state["fecha_fin"]] 
+
+    corrMatrix = df.corr()
+    valorcorre = corrMatrix[state['column']]
+    state["Corvar"] = valorcorre[state['column']]
+    state["Corvar"] = "{:.2f}".format(state["Corvar"])
+
 
 def updateBox(state):
-    
     df = data[data.index.month == int(state['mes'])]
     if state["column"] in df.columns:
         state["graficoBox"] = px.box(df, x=df.index.year, y=state['column'])
@@ -44,6 +50,9 @@ initial_state = ss.init_state({
     "meses": {str(k):str(k) for k in range(1,13)},
     "mes": '1',
     "graficoBox": None,
+
+    "graficoCor" : None,
+    "Corvar":0.0,
     
   
 })
