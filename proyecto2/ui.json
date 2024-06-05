@@ -304,7 +304,7 @@
             "visible": true,
             "binding": {
                 "eventType": "ss-date-change",
-                "stateRef": "@{fecha_ini}"
+                "stateRef": "fecha_ini"
             }
         },
         "rrha01fkzzuyut19": {
@@ -322,7 +322,7 @@
             "visible": true,
             "binding": {
                 "eventType": "ss-date-change",
-                "stateRef": "@{fecha_fin}"
+                "stateRef": "fecha_fin"
             }
         },
         "pdrz6k86h2gxi8tp": {
@@ -334,7 +334,7 @@
             },
             "isCodeManaged": false,
             "position": 0,
-            "parentId": "s3093rc9vj827qlq",
+            "parentId": "46bb3mj29z401u2k",
             "handlers": {
                 "ss-option-change": "updateBox"
             },
@@ -347,41 +347,74 @@
         "2w8j2da1d4uxme2p": {
             "id": "2w8j2da1d4uxme2p",
             "type": "columns",
-            "parentId": "ovvtflxe3xt0qj4t",
             "content": {},
-            "handlers": {},
+            "isCodeManaged": false,
             "position": 1,
+            "parentId": "ovvtflxe3xt0qj4t",
+            "handlers": {},
             "visible": true
         },
         "xht0ep30wm7td3w7": {
             "id": "xht0ep30wm7td3w7",
             "type": "columns",
-            "parentId": "s3093rc9vj827qlq",
             "content": {},
+            "isCodeManaged": false,
+            "position": 0,
+            "parentId": "s3093rc9vj827qlq",
             "handlers": {},
-            "position": 1,
             "visible": true
         },
         "uh3h82e0nob6wynz": {
             "id": "uh3h82e0nob6wynz",
             "type": "column",
-            "parentId": "xht0ep30wm7td3w7",
             "content": {
                 "width": "1"
             },
-            "handlers": {},
+            "isCodeManaged": false,
             "position": 0,
+            "parentId": "xht0ep30wm7td3w7",
+            "handlers": {},
             "visible": true
         },
         "h0bijeudg1f2qr25": {
             "id": "h0bijeudg1f2qr25",
             "type": "plotlygraph",
-            "parentId": "uh3h82e0nob6wynz",
             "content": {
                 "spec": "@{graficoBox}"
             },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "uh3h82e0nob6wynz",
             "handlers": {},
+            "visible": true
+        },
+        "fu0ou8zmeydno3zs": {
+            "id": "fu0ou8zmeydno3zs",
+            "type": "dropdowninput",
+            "content": {
+                "label": "Mes",
+                "options": "@{meses}"
+            },
+            "isCodeManaged": false,
+            "position": 1,
+            "parentId": "46bb3mj29z401u2k",
+            "handlers": {
+                "ss-option-change": "updateBox"
+            },
+            "visible": true,
+            "binding": {
+                "eventType": "ss-option-change",
+                "stateRef": "mes"
+            }
+        },
+        "46bb3mj29z401u2k": {
+            "id": "46bb3mj29z401u2k",
+            "type": "horizontalstack",
+            "content": {},
+            "isCodeManaged": false,
             "position": 0,
+            "parentId": "uh3h82e0nob6wynz",
+            "handlers": {},
             "visible": true
         }
     }
