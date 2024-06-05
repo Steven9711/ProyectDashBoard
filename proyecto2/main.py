@@ -30,6 +30,7 @@ initial_state = ss.init_state({
     },
     "dataframe": data,
     "var":{str(key):str(key) for key in data.columns},
+    "var2":{str(key):str(key) for key in data.columns},
     "column":'cloud_cover',
     "graficol": None,
     "grafiHist":None,
