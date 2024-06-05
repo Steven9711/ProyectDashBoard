@@ -26,7 +26,7 @@ def updateBox(state):
     
 initial_state = ss.init_state({
     "my_app": {
-        "title": "My App"
+        "title": "Dashboard :3"
     },
     "dataframe": data,
     "var":{str(key):str(key) for key in data.columns},
