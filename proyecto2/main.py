@@ -7,8 +7,7 @@ data_link = "https://raw.githubusercontent.com/cgl-itm/ProgramacionAvanzada-ITM/
 data = pd.read_csv(data_link, index_col=0, parse_dates=True)
 
 def update(state):
-    
-    
+    if state["column"] in data.columns:
         df = data[state["column"]]
         state["graficol"] = px.line(df)
         state["grafiHist"]=px.histogram(df)
