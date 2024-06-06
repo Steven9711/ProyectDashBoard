@@ -7,13 +7,15 @@ data_link = "https://raw.githubusercontent.com/cgl-itm/ProgramacionAvanzada-ITM/
 data = pd.read_csv(data_link, index_col=0, parse_dates=True)
 
 def update(state):
-    df = data[state["column"]]
-    state["graficol"] = px.line(df)
-    state["grafiHist"]=px.histogram(df)
-    state["medVar"]="{:.2f}".format(df.mean())
-    state["minVar"]="{:.2f}".format(df.min())
-    state["maxVar"]="{:.2f}".format(df.max())
-    state["desVar"]="{:.2f}".format(df.std())
+    
+    
+        df = data[state["column"]]
+        state["graficol"] = px.line(df)
+        state["grafiHist"]=px.histogram(df)
+        state["medVar"]="{:.2f}".format(df.mean())
+        state["minVar"]="{:.2f}".format(df.min())
+        state["maxVar"]="{:.2f}".format(df.max())
+        state["desVar"]="{:.2f}".format(df.std())
 
 def updateBi(state):
     #print(type(state["fecha_ini"]),type(state["fecha_fin"]))

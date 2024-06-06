@@ -410,14 +410,15 @@
         "05uunwr3qu2ef01v": {
             "id": "05uunwr3qu2ef01v",
             "type": "metric",
-            "parentId": "ovvtflxe3xt0qj4t",
             "content": {
                 "note": "+Pass",
                 "name": "Correlacion",
                 "metricValue": "@{Corvar}"
             },
-            "handlers": {},
+            "isCodeManaged": false,
             "position": 1,
+            "parentId": "ovvtflxe3xt0qj4t",
+            "handlers": {},
             "visible": true
         }
     }
