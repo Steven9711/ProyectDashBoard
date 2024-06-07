@@ -420,6 +420,17 @@
             "parentId": "ovvtflxe3xt0qj4t",
             "handlers": {},
             "visible": true
+        },
+        "xhiylrv2ltwsjoej": {
+            "id": "xhiylrv2ltwsjoej",
+            "type": "plotlygraph",
+            "parentId": "ovvtflxe3xt0qj4t",
+            "content": {
+                "spec": "@{graficScatter}"
+            },
+            "handlers": {},
+            "position": 2,
+            "visible": true
         }
     }
 }
