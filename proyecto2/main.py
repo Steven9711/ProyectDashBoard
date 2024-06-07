@@ -19,12 +19,13 @@ def update(state):
 def updateBi(state):
     #print(type(state["fecha_ini"]),type(state["fecha_fin"]))
     df = data[state["fecha_ini"]:state["fecha_fin"]] 
-
-    corrMatrix = df.corr()
-    valorcorre = corrMatrix[state['column']]
-    state["Corvar"] = valorcorre[state['column']]
-    state["Corvar"] = "{:.2f}".format(state["Corvar"])
-
+    if state["column"] in df.columns and state["column1"] in df.columns:
+        corr = df[state['column']].corr(df[state['column1']])
+        state["Corvar"] = "{:.2f}".format(corr)
+    #corrMatrix = df.corr()
+    #valorcorre = corrMatrix[state['column']:state["column1"]]
+    #state["Corvar"] = valorcorre[state['column']]
+    #state["Corvar"] = "{:.2f}".format(state['Corvar'])
 
 def updateBox(state):
     df = data[data.index.month == int(state['mes'])]
@@ -33,7 +34,7 @@ def updateBox(state):
     
 initial_state = ss.init_state({
     "my_app": {
-        "title": "Dashboard :3"
+        "title": "Dashboard"
     },
     "dataframe": data,
     "var":{str(key):str(key) for key in data.columns},
