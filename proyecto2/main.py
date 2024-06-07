@@ -17,15 +17,11 @@ def update(state):
         state["desVar"]="{:.2f}".format(df.std())
 
 def updateBi(state):
-    #print(type(state["fecha_ini"]),type(state["fecha_fin"]))
     df = data[state["fecha_ini"]:state["fecha_fin"]] 
     if state["column"] in df.columns and state["column1"] in df.columns:
         corr = df[state['column']].corr(df[state['column1']])
-        state["Corvar"] = "{:.2f}".format(corr)
-    #corrMatrix = df.corr()
-    #valorcorre = corrMatrix[state['column']:state["column1"]]
-    #state["Corvar"] = valorcorre[state['column']]
-    #state["Corvar"] = "{:.2f}".format(state['Corvar'])
+        state["Corvar"] = "{:.7f}".format(corr)
+
 
 def updateBox(state):
     df = data[data.index.month == int(state['mes'])]
@@ -52,7 +48,7 @@ initial_state = ss.init_state({
     "meses": {str(k):str(k) for k in range(1,13)},
     "mes": '1',
     "graficoBox": None,
-
+    "graficScatter"
     "graficoCor" : None,
     "Corvar":0.0,
     
