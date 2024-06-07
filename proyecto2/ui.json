@@ -424,12 +424,24 @@
         "xhiylrv2ltwsjoej": {
             "id": "xhiylrv2ltwsjoej",
             "type": "plotlygraph",
-            "parentId": "ovvtflxe3xt0qj4t",
             "content": {
                 "spec": "@{graficScatter}"
             },
-            "handlers": {},
+            "isCodeManaged": false,
             "position": 2,
+            "parentId": "ovvtflxe3xt0qj4t",
+            "handlers": {},
+            "visible": true
+        },
+        "aktwun41u44q4w7g": {
+            "id": "aktwun41u44q4w7g",
+            "type": "plotlygraph",
+            "parentId": "ovvtflxe3xt0qj4t",
+            "content": {
+                "spec": "@{graficoCor}"
+            },
+            "handlers": {},
+            "position": 3,
             "visible": true
         }
     }

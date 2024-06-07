@@ -2,6 +2,7 @@ import streamsync as ss
 import pandas as pd
 import plotly.express as px
 import numpy as np
+import seaborn as sns
 
 data_link = "https://raw.githubusercontent.com/cgl-itm/ProgramacionAvanzada-ITM/main/Proyectos/04_Datos/02_london_weather.csv"
 data = pd.read_csv(data_link, index_col=0, parse_dates=True)
@@ -22,6 +23,7 @@ def updateBi(state):
         corr = df[state['column']].corr(df[state['column1']])
         state["Corvar"] = "{:.7f}".format(corr) 
         state["graficScatter"] = px.scatter(df,x=state['column'], y=state['column1'])
+        state["graficoCor"] = px.imshow(df.corr(), text_auto=True, aspect="auto")
 
 def updateBox(state):
     df = data[data.index.month == int(state['mes'])]
@@ -52,8 +54,8 @@ initial_state = ss.init_state({
     "graficoCor" : None,
     "Corvar":0.0,
     
-  
 })
+
 update(initial_state)
 updateBi(initial_state)
 updateBox(initial_state)
