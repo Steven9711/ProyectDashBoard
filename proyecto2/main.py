@@ -22,7 +22,7 @@ def updateBi(state):
     if state["column"] in df.columns and state["column1"] in df.columns:
         corr = df[state['column']].corr(df[state['column1']])
         state["Corvar"] = "{:.7f}".format(corr) 
-        state["graficScatter"] = px.scatter(df,x=state['column'], y=state['column1'])
+        state["graficScatter"] = px.scatter(df,x=state['column'], y=state['column1'],color=state['column1'])
         state["graficoCor"] = px.imshow(df.corr(), text_auto=True, aspect="auto")
 
 def updateBox(state):
